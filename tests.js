@@ -3,11 +3,11 @@
 // constructors in the constructor section above ;D
 // #######################################################################
 
-// it("should make Sadie happy when Mason pets her", function(){
-//   expect(sadie.status).toBe('normal');
-//   mason.pet(sadie);
-//   expect(sadie.status).toBe('happy');
-// });
+it("should make Sadie happy when Mason pets her", function(){
+  expect(sadie.status).toBe('normal');
+  mason.pet(sadie);
+  expect(sadie.status).toBe('happy');
+});
 
 it("should make Sadie black", function(){
   expect(sadie.color).toBe('black');

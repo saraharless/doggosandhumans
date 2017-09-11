@@ -19,22 +19,8 @@ function Dog (status, color, hungry, owner) {
 // Needed: sadie, moonshine, atticus
 
 let sadie = new Dog ('normal', 'black', false, 'mason')
-let moonshine = new Dog ()
-let atticus = new Dog ()
-
-// function Status(normal, happy){
-//   this.normal = normal;
-//   this.happy = happy;
-// }
-// function petDoggo(pet, status){
-//   if (pet === true) {
-//     sadie.changeStatus("happy");
-//   }
-// }
-
-
-
-
+let moonshine = new Dog ('normal', ' ', true)
+let atticus = new Dog ('normal', ' ', false)
 
 
 //     __
@@ -44,12 +30,30 @@ let atticus = new Dog ()
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
 
 // Human Constructor & Prototype
-function Human (feed, cool) {
-  this.feed = feed;
+function Human (name, feed, cool, pet) {
+  this.name = name;
+  //create function to alter status of feed
+  this.feed = function(food){
+    if(feed === true) {
+      return food.hungry = false;
+    }
+  };
   this.cool = cool;
+  //create function to alter status of pet
+  this.pet = function(dog){
+      if (pet === true) {
+      return dog.status = 'happy';
+      }
+    };
 }
+
 
 // Instances of Human
 // Needed: mason, julia
-  let mason = new Human()
-  let julia = new Human()
+
+
+  let mason = new Human('mason', true, false, true)
+  let julia = new Human('julia', true, true, false)
+
+
+  // mason.pet(sadie);
